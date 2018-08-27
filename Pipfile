@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 django-heroku = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
