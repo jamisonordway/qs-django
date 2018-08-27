@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'api',
     'dj_database_url',
     'corsheaders',
+    'django_heroku'
 ]
 
 MIDDLEWARE = [
