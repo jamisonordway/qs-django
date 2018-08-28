@@ -21,4 +21,16 @@ class ModelTestCase(TestCase):
         new_count = Food.objects.count()
         self.assertNotEqual(count, new_count)
 
-# Create your tests here.
+class FoodViewsTest(TestCase):
+      """Defines test suite for the food api views."""
+
+    def setUp(self):
+        """Define the test client and other test variables."""
+        self.client = APIClient()
+        self.taco = Food.objects.create(name="taco", calories=400)
+        self.salad = Food.objects.create(name="salad", calories=200)
+        self.steak = Food.objects.create(name="steak", calories=700)
+
+    def test_status_for_all_foods(self):
+        response = self.client.get('api/vi/foods')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
