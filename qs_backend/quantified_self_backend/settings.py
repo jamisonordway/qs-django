@@ -138,7 +138,11 @@ CORS_ALLOW_METHODS = (
 
 STATIC_URL = '/static/'
 
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'staticfiles'),
 )
+
+heroku config:set DISABLE_COLLECTSTATIC=1
+
 django_heroku.settings(locals())
