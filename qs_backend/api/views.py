@@ -2,7 +2,7 @@ import json
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse, JsonResponse
-from api.serializers import FoodSerializer, MealSerializer
+from .serializers import FoodSerializer, MealSerializer
 from rest_framework import viewsets
 from rest_framework import Response
 from api.models import Food, Meal
