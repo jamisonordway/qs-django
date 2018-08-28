@@ -1,6 +1,6 @@
 import django_heroku
 import os
-
+from corsheaders.defaults import default_headers
 ROOT_PATH = os.path.dirname(__file__)
 STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 
@@ -126,8 +126,15 @@ USE_L10N = True
 USE_TZ = True
 
 CORS_ORIGIN_ALLOW_ALL = True
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
 
 STATIC_URL = '/static/'
 
