@@ -107,8 +107,8 @@ class MealViewsTest(TestCase):
 
     def test_add_food_to_meal(self):
         response = self.client.post(f"/api/v1/meals/{self.lunch.id}/foods/{self.salad.id}")
-        self.assertEqual(response.data["meessage"], "Successfully added #{self.salad.name} to #{self.lunch.name}")
+        self.assertEqual(response.data["meessage"], "Successfully added {self.salad.name} to {self.lunch.name}")
 
     def test_delete_food_from_meal(self):
         response = self.client.delete(f"/api/v1/meals/{self.lunch.id}/foods/{self.salad.id}")
-        self.assertEqual(response.data["message"], "Successfully removed #{self.salad.name} from #{self.lunch.name}")
+        self.assertEqual(response.data["message"], "Successfully removed {self.salad.name} from {self.lunch.name}")
