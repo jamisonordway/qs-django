@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'dj_database_url',
     'corsheaders',
     'django_heroku'
+    'qs-django.apps.ApiConfig'
 ]
 
 MIDDLEWARE = [
